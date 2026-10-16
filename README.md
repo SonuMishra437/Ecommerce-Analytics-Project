@@ -11,120 +11,118 @@ Also when orders delivers on time it take 4 days & when it delayed it takes 7 da
 ### Steps followed 
 
 - Step 1 : Load data into Power BI Desktop, dataset is a csv file.
-- Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options and then transform data corrects data type ,handles missing values,clean data before loading to data model.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
+- Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options and then transform data corrects data type ,handles missing values,clean data before loading to data model then i perform data modeling star schema was used.
+- Step 3 : Also since by default, profile will be opened only for 1000 rows so i  select "column profiling based on entire dataset".
 - Step 4 : It was observed that in none of the columns errors & empty values were present except column named "delivery days","Customer rating","Customer Review"
 - Step 5 : For calculating average delay time in delivery , i fill where it contains empty values(less then 18 %)
 - Step 6 : In the report view, under the view tab, theme was selected.
-- Step 7 : Since the data contains various ratings, thus in order to represent ratings, a new visual was added using the three ellipses in the visualizations pane in report view. 
-- Step 8 : Visual filters (Slicers) were added for four fields named "Class", "Customer Type", "Gate Location" & "Type of travel".
-- Step 9 : Two card visuals were added to the canvas, one representing average departure delay in minutes & other representing average arrival delay in minutes.
-           Using visual level filter from the filters pane, basic filtering was used & null values were unselected for consideration into average calculation.
-           
-           Although, by default, while calculating average, blank values are ignored.
-- Step 10 : A bar chart was also added to the report design area representing the number of satisfied & neutral/unsatisfied customers. While creating this visual, field named "Gender" was also added to the Legends bucket, thus number of customers are also seggregated according the gender. 
-- Step 11 : Ratings Visual was used to represent different ratings mentioned below,
+- Step 7 : first Page of report tells Overview of Ecommerce Performance,including Total orders,average order value,total unit sold,total profit margin,net sales. 
+- Step 8 : Visual filters (Slicers) were added for four fields named "Month", "Year", "Shipping status" , "Product Category","Payment Method","Region","Country".
+- Step 9 : Five card visuals were added to the canvas, one representing Total Orders ,other representing average order value,other used to represent Total units sold,other used to represent Total profit margin,net sales.
+           Using visual level filter from the filters pane, basic filtering was used for consideration into calculation.
+  
+         
+- Step 10 : A stacked bar chart was also added to the report design area representing the number of total orders by product category and units ordered by product category.
 
-  (a) Baggage Handling
+<img width="425" height="229" alt="{7982809C-5991-4CA2-8528-C40C9695DA8E}" src="https://github.com/user-attachments/assets/12131734-f485-4923-a7ff-016ccbb880de" />
 
-  (b) Check-in Services
   
-  (c) Cleanliness
-  
-  (d) Ease of online booking
-  
-  (e) Food & Drink
-  
-  (f) In-flight Entertainment
 
-  (g) In-flight Service
-  
-  (h) In-flight wifi service
-  
-  (i) Leg Room service
-  
-  (j) On-board service
-  
-  (k) Online boarding
-  
-  (l) Seat comfort
-  
-  (m) Departure & arrival time convenience
-  
-In our dataset, Some parameters were assigned value 0, representing those parameters are not applicable for some customers.
+- Step 11 : to represent top 5 product according to customer rating.i use clustered bar chart.
 
-All these values have been ignored while calculating average rating for each of the parameters mentioned above.
 
-- Step 12 : In the report view, under the insert tab, two text boxes were added to the canvas, in one of them name of the airlines was mentioned & in the other one company's tagline was written.
-- Step 13 : In the report view, under the insert tab, using shapes option from elements group a rectangle was inserted & similarly using image option company's logo was added to the report design area. 
+<img width="331" height="549" alt="{A7CF28E9-9411-4DF3-A093-A5F3A606ACCA}" src="https://github.com/user-attachments/assets/5b378af1-668a-416e-8dd4-ac8afc4f6f3f" />
+
+
+- Step 12 : In the report view, under the insert tab, two text boxes were added to the canvas, in one of them name Executive overview was mentioned & in the other one navigator button was mention.
+- Step 13 : To represent monthly orders trends i used line chart.
+
+<img width="466" height="202" alt="{96691630-5AB0-42AC-8064-8AF738D9AF00}" src="https://github.com/user-attachments/assets/1513379d-d326-4f5c-bed7-3b41869d2ec3" />
+
 - Step 14 : Calculated column was created in which, customers were grouped into various age groups.
 
 for creating new column following DAX expression was written;
        
-        Age Group = 
-        
-        if(airline_passenger_satisfaction[Age]<=25, "0-25 (25 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=50, "25-50 (50 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=75, "50-75 (75 included)",
-        
-        "75-100 (100 included)")))
-        
+        Age Breakdown = 
+           IF('customers_dim'[customer_age]>=50,"Elder",
+           IF('customers_dim'[customer_age]>=40,"Adult",
+           "Young Adult"
+           
+           )
+           
+           )
 Snap of new calculated column ,
 
-![Snap_1](https://user-images.githubusercontent.com/102996550/174089602-ab834a6b-62ce-4b62-8922-a1d241ec240e.jpg)
+<img width="163" height="702" alt="{43877BCE-A53B-4CA2-9AF0-DDE7E88013E2}" src="https://github.com/user-attachments/assets/7fad38b7-8fbe-4949-bf86-b4de0cdc044c" />
 
         
-- Step 15 : New measure was created to find total count of customers.
+- Step 15 : New measure was created to find total count of return orders.
 
 Following DAX expression was written for the same,
         
-        Count of Customers = COUNT(airline_passenger_satisfaction[ID])
-        
-A card visual was used to represent count of customers.
+        Total Returns1 = CALCULATE(COUNTROWS('fact_table1'),'fact_table1'[order_status] = "Returned")
+A stacked column chart visual was used to represent count of returns orders by product category.
 
-![Snap_Count](https://user-images.githubusercontent.com/102996550/174090154-424dc1a4-3ff7-41f8-9617-17a2fb205825.jpg)
+<img width="580" height="222" alt="{D3228399-B3AF-4C43-A985-18D6D33F8909}" src="https://github.com/user-attachments/assets/f7ec3fe6-16bf-4630-ab5e-4936e89ef7f9" />
+
 
         
- - Step 16 : New measure was created to find  % of customers,
+ - Step 16 : New measure was created to find  year wise sales(YTD),
  
  Following DAX expression was written to find % of customers,
  
-         % Customers = (DIVIDE(airline_passenger_satisfaction[Count of Customers], 129880)*100)
+         YTD = TOTALYTD(SUM(fact_table1[profit_margin_percentage]),'fact_table1'[order_date].[Date])
  
- A card visual was used to represent this perecntage.
+ - Step 17 : To represent net sales by shipping status line and stacked column chart used.
+
+<img width="466" height="247" alt="{331959CB-F4CD-4C11-ADD9-B5CAD459868E}" src="https://github.com/user-attachments/assets/de18c594-dbd7-49a6-bbe5-e6a5f1ecd096" />
+
+ - Step 18 : to represent net margin through shipping status donut chart used.
  
- Snap of % of customers who preferred business class
- 
- ![Snap_Percentage](https://user-images.githubusercontent.com/102996550/174090653-da02feb4-4775-4a95-affb-a211ca985d07.jpg)
+<img width="361" height="237" alt="{12D65E20-4306-44FB-A5C5-0C92148C31BB}" src="https://github.com/user-attachments/assets/e9423942-73af-4aae-a4c8-487876478431" />
+
+
+# First Page of report.
+<img width="1437" height="777" alt="{33F5189A-18F1-4DFB-BB48-72C7DE85243F}" src="https://github.com/user-attachments/assets/5c386364-f73a-403b-be58-010cd235e0ce" />
+
+
+# Second Page of report.
+<img width="1425" height="771" alt="{CFFC66B5-7D4A-477A-A8D9-2B4E7A5A3583}" src="https://github.com/user-attachments/assets/9a7c0d63-ef3e-410a-8315-219f5729168f" />
+
+
+
+# Third Page of report.
+
+<img width="1423" height="764" alt="{F66710C0-D93F-4380-AA99-015AE60B833A}" src="https://github.com/user-attachments/assets/144758aa-1575-4e92-88f3-c28ce046bd60" />
+
+
+
+# Fourth Page of report.
+<img width="1428" height="777" alt="{C56CFA7D-3855-4E80-BEE3-AB598AE0D7D3}" src="https://github.com/user-attachments/assets/e26b8096-99cc-4fe1-904e-57bb9d797e91" />
+
+
+
+# Fial Page of report.
+<img width="1373" height="731" alt="{47106745-70F2-45FD-AB8A-3DCB651D8AA3}" src="https://github.com/user-attachments/assets/19a98e83-fb33-4630-a8f7-ffe52ee4eadb" />
+
 
  
- - Step 17 : New measure was created to calculate total distance travelled by flights & a card visual was used to represent total distance.
- 
- Following DAX expression was written to find total distance,
- 
-         Total Distance Travelled = SUM(airline_passenger_satisfaction[Flight Distance])
-    
- A card visual was used to represent this total distance.
- 
- 
- ![Snap_3](https://user-images.githubusercontent.com/102996550/174091618-bf770d6c-34c6-44d4-9f5e-49583a6d5f68.jpg)
- 
- - Step 18 : The report was then published to Power BI Service.
- 
- 
-![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
-
-# Snapshot of Dashboard (Power BI Service)
-
-![dashboard_snapo](https://user-images.githubusercontent.com/102996550/174096257-11f1aae5-203d-44fc-bfca-25d37faf3237.jpg)
+ # Project video 
 
  
- # Report Snapshot (Power BI DESKTOP)
 
- 
-![Dashboard_upload](https://user-images.githubusercontent.com/102996550/174074051-4f08287a-0568-4fdf-8ac9-6762e0d8fa94.jpg)
+
+[2026-10-16 23-26-50.zip](https://github.com/user-attachments/files/33567198/2026-10-16.23-26-50.zip)
+
+
+
+
+
+
+
+
+
+
 
 # Insights
 
