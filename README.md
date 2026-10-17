@@ -233,13 +233,13 @@ Average delay will change if different visual filters will be applied.
 
 6.1) net margin in quarter 1 - $12,81,794.81
 
-6.1) net margin in quarter 2 - $14,07,509.35
+6.2) net margin in quarter 2 - $14,07,509.35
 
-6.1) net margin in quarter 3 - $14,03,081.59
+6.3) net margin in quarter 3 - $14,03,081.59
 
-6.1) net margin in quarter 4 - $16,06,149.71
+6.4) net margin in quarter 4 - $16,06,149.71
 
-   thus max net margin increased in quarter -  4
+    thus max net margin increased in quarter -  4
 
 
 ### Net margin by top 10 product category.
@@ -273,9 +273,9 @@ Average delay will change if different visual filters will be applied.
 
 8.2) VIP customers - 13,957
 
-8.1) Premium customers - 34,746           
+8.3) Premium customers - 34,746           
 
-8.1) Customers own their business - 13,777
+8.4) Customers own their business - 13,777
 
       thus we have max consumers.
 
@@ -289,7 +289,7 @@ Average delay will change if different visual filters will be applied.
 
 9.4) In 2024 net margin - $1.26 millions
 
-9.1) In 2025 net margin - $1.25 millions
+9.5) In 2025 net margin - $1.25 millions
 
     thus yearly margin maximum in 2024.
 
