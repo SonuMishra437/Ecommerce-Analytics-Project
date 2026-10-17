@@ -267,18 +267,31 @@ Average delay will change if different visual filters will be applied.
       thus max net margin comes from Sports & outdoors.
 
 
+### Customer Breakdown.
 
+8.1) Customer type consumer - 75,636
 
+8.2) VIP customers - 13,957
 
+8.1) Premium customers - 34,746           
 
+8.1) Customers own their business - 13,777
 
+      thus we have max consumers.
 
+### Yearly margin.
 
+9.1) In 2021 net margin - $1.24 millions
 
+9.2) In 2022 net margin - $1.24 millions
 
+9.3) In 2023 net margin - $1.24 millions
 
+9.4) In 2024 net margin - $1.26 millions
 
+9.1) In 2025 net margin - $1.25 millions
 
+    thus yearly margin maximum in 2024.
 
 
 
