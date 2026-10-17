@@ -130,38 +130,32 @@ https://github.com/user-attachments/assets/74d4a1e5-c383-4457-a791-4ecce19fa91b
 
 # Insights
 
-A single page report was created on Power BI Desktop & it was then published to Power BI Service.
+A five page report was created on Power BI Desktop & it was then published to Power BI Service.
 
-Following inferences can be drawn from the dashboard;
+Following inferences can be drawn from the report;
 
-### [1] Total Number of Customers = 129880
+### [1] Total Number of Orders = 1,38000
+### distribution of orders by shipping status.
 
-   Number of satisfied Customers (Male) = 28159 (21.68 %)
+   Number of orders completed  = 1,13,559 (82.22 %)
 
-   Number of satisfied Customers (Female) = 28269 (21.76 %)
+   Number of orders returned  = 9,462 (6.85 %)
 
-   Number of neutral/unsatisfied customers (Male) = 35822 (27.58 %)
+   Number of cancelled orders = 8,398 (6.08 %)
 
-   Number of neutral/unsatisfied customers (Female) = 37630 (28.97 %)
+   Number of pending orders= 6,697 (4.85 %)
 
 
-           thus, higher number of customers are neutral/unsatisfied.
+           thus, higher number of orders are completed.
            
-### [2] Average Ratings
+### [2] Top 5 Product category by Customer Ratings
 
-    a) Baggage Handling - 3.63/5
-    b) Check-in Service - 3.31/5
-    c) Cleanliness - 3.29/5
-    d) Ease of online booking - 2.88/5
-    e) Food & Drink - 3.21/5
-    f) In-flight Entertainment - 3.36/5
-    g) In-flight service - 3.64/5
-    h) In-flight Wifi service - 2.81/5
-    i) Leg room service - 3.37/5
-    j) On-board service - 3.38/5
-    k) Online boarding - 3.33/5
-    l) Seat comfort - 3.44/5
-    m) Departure & arrival convenience - 3.22/5
+    a) Baby & Kids - 3.06/5
+    b) Spots & outdoors - 3.05/5
+    c) Fashion - 3.05/5
+    d) Toys & games - 3.05/5
+    e) Jewellery - 3.04/5
+  
   
   while calculating average rating, null values have been ignored as they were not relevant for some customers. 
   
@@ -169,46 +163,125 @@ Following inferences can be drawn from the dashboard;
   
   ### [3] Average Delay 
   
-      a) Average delay in arrival(minutes) - 15.09
-      b) Average delay in departure(minutes) - 14.71
+      a) Average delay  when orders delivered early - 3 days
+      a) Average delay  when orders delivered on time - 4 days
+      a) Average delay  when orders  delayed - 7 days
+      a) Average delay  when orders cancelled - 15 days
+  
 Average delay will change if different visual filters will be applied.
 
  ### [4] Some other insights
  
- ### Class
+ #### Net margin by different age groups.           
+
+ 1.1) Net margin by Elders  - 33.35 %
  
- 1.1) 47.87 % customers travelled by Business class.
+ 1.2) Net margin by young adults - 33.33 %
  
- 1.2) 44.89 % customers travelled by Economy class.
+ 1.3) Net margin by adults - 33.32 %
  
- 1.3) 7.25 % customers travelled by Economy plus class.
+
  
-         thus, maximum customers travelled by Business class.
+         thus, maximum margin comes from age group elders.
  
- ### Age Group
+ ### Net margin by shipping status
  
- 2.1)  21.69 % customers belong to '0-25' age group.
+
+      a) Net margin when orders delivered to customers - 79.8 %
+      a) Net margin when orders returns - 8.21 % 
+      a) Net margin when orders cancelled - 7.32  %
+      a) Net margin when orders in pending - 4.67  %
+    
  
- 2.2)  52.44 % customers belong to '25-50' age group.
- 
- 2.3)  25.57 % customers belong to '50-75' age group.
- 
- 2.4)  0.31 % customers belong to '75-100' age group.
- 
-         thus, maximum customers belong to '25-50' age group.
+         thus, maximum margin comes from when orders completed.
          
-### Customer Type
+### Customer loyalty overview
 
-3.1) 18.31 % customers have customer type 'First time'.
+3.1) Loyal customers - 1,29,447.
 
-3.2) 81.69 % customers have customer type 'returning'.
+3.2) 8,355 customers have customer type 'returning'.
+
+3.3) New Customers - 334
        
-       thus, more customers have customer type 'returning'.
+       thus, we have more customers loyal.
 
-### Type of travel
+### Returning customers by gender
 
-4.1) 69.06 % customers have travel type 'Business'.
+4.1) 47.99 % male customers returning .
 
-4.2) 30.94 % customers have travel type 'Personal'.
+4.2) 48.81 % female customers returning .
 
-        thus, more customers have travel type 'Business'.
+4.3) 3.09 % non binary customers returning .
+
+
+        thus, more female customers "returning".
+
+### Customer Acquisition Cost breakdown.
+
+#### amount spent in marketing for different age groups.
+
+5.1) Avg acquisition cost for young adults - $42.26(33.43 % ).
+
+5.2) Avg acquisition cost for  adults - $42.02(33.24 % ).
+
+5.3) Avg acquisition cost for elders - $42.13(33.33 % ).
+
+
+     while max net margin comes from age group elders.
+
+### Quarterly net margin .
+
+6.1) net margin in quarter 1 - $12,81,794.81
+
+6.1) net margin in quarter 2 - $14,07,509.35
+
+6.1) net margin in quarter 3 - $14,03,081.59
+
+6.1) net margin in quarter 4 - $16,06,149.71
+
+   thus max net margin increased in quarter -  4
+
+
+### Net margin by top 10 product category.
+
+7.1) Sports & outdoors - 10.81 %
+
+7.2) Books  &  Media   - 10.73 %
+
+7.3) Health & wellness - 10.41 %
+
+7.4) Beauty & personal care - 10.34 %
+
+7.5) Office Supplies - 10.17%
+
+7.6) Grocery - 9.86 %
+
+7.7) Toys & games- 9.78 %
+
+7.8) Baby & kids - 9.43 %
+
+7.9) Pet & supplies - 9.26 %
+
+7.10) Automotive - 9.21 %
+
+      thus max net margin comes from Sports & outdoors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
