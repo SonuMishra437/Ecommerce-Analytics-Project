@@ -24,20 +24,22 @@ Also when orders delivers on time it take 4 days & when it delayed it takes 7 da
          
 - Step 10 : A stacked bar chart was also added to the report design area representing the number of total orders by product category and units ordered by product category.
 
-<img width="425" height="229" alt="{7982809C-5991-4CA2-8528-C40C9695DA8E}" src="https://github.com/user-attachments/assets/12131734-f485-4923-a7ff-016ccbb880de" />
+<img width="431" height="229" alt="{93BA0A1F-EA77-4AD0-88A3-CB82F434C17F}" src="https://github.com/user-attachments/assets/65257b48-d5db-4b27-b2bc-899f9c265972" />
 
   
 
-- Step 11 : to represent top 5 product according to customer rating.i use clustered bar chart.
+- Step 11 : to represent top 5 product according to customer rating.I use clustered bar chart.
 
 
-<img width="331" height="549" alt="{A7CF28E9-9411-4DF3-A093-A5F3A606ACCA}" src="https://github.com/user-attachments/assets/5b378af1-668a-416e-8dd4-ac8afc4f6f3f" />
+<img width="322" height="528" alt="{F788F9E8-9577-4EA0-B7F1-95A29BAD159F}" src="https://github.com/user-attachments/assets/8711a263-d92b-4bb1-935b-d688f289bcba" />
 
 
 - Step 12 : In the report view, under the insert tab, two text boxes were added to the canvas, in one of them name Executive overview was mentioned & in the other one navigator button was mention.
+
 - Step 13 : To represent monthly orders trends i used line chart.
 
-<img width="466" height="202" alt="{96691630-5AB0-42AC-8064-8AF738D9AF00}" src="https://github.com/user-attachments/assets/1513379d-d326-4f5c-bed7-3b41869d2ec3" />
+<img width="456" height="198" alt="{D35DC2BA-23A4-405D-A361-B44E6054AF5E}" src="https://github.com/user-attachments/assets/1565da9d-37dc-4ea3-8b0d-eac434ab10c0" />
+
 
 - Step 14 : Calculated column was created in which, customers were grouped into various age groups.
 
@@ -63,7 +65,7 @@ Following DAX expression was written for the same,
         Total Returns1 = CALCULATE(COUNTROWS('fact_table1'),'fact_table1'[order_status] = "Returned")
 A stacked column chart visual was used to represent count of returns orders by product category.
 
-<img width="580" height="222" alt="{D3228399-B3AF-4C43-A985-18D6D33F8909}" src="https://github.com/user-attachments/assets/f7ec3fe6-16bf-4630-ab5e-4936e89ef7f9" />
+<img width="613" height="236" alt="{CD0C404D-1F37-48A2-A97F-AB2048F83F56}" src="https://github.com/user-attachments/assets/0e5da61e-bfb6-481e-bd1f-8d2308ee2659" />
 
 
         
@@ -75,7 +77,7 @@ A stacked column chart visual was used to represent count of returns orders by p
  
  - Step 17 : To represent net sales by shipping status line and stacked column chart used.
 
-<img width="466" height="247" alt="{331959CB-F4CD-4C11-ADD9-B5CAD459868E}" src="https://github.com/user-attachments/assets/de18c594-dbd7-49a6-bbe5-e6a5f1ecd096" />
+<img width="504" height="264" alt="{615DA6CF-8DA9-45F9-8B6E-CA21014B2F83}" src="https://github.com/user-attachments/assets/0d40dafb-3e27-44df-b4ed-2338cbd56757" />
 
  - Step 18 : to represent net margin through shipping status donut chart used.
  
@@ -83,49 +85,30 @@ A stacked column chart visual was used to represent count of returns orders by p
 
 
 # First Page of report.
-<img width="1437" height="777" alt="{33F5189A-18F1-4DFB-BB48-72C7DE85243F}" src="https://github.com/user-attachments/assets/5c386364-f73a-403b-be58-010cd235e0ce" />
+<img width="1377" height="768" alt="{00A9606F-F4BD-43FB-AE29-0403EA4AD209}" src="https://github.com/user-attachments/assets/3234b299-88de-48c4-894f-f4fedecff89b" />
+
 
 
 # Second Page of report.
-<img width="1425" height="771" alt="{CFFC66B5-7D4A-477A-A8D9-2B4E7A5A3583}" src="https://github.com/user-attachments/assets/9a7c0d63-ef3e-410a-8315-219f5729168f" />
+<img width="1366" height="756" alt="{86743FEE-B7B1-46EE-A2D8-2918108C7494}" src="https://github.com/user-attachments/assets/09f6e7df-8778-456e-9cbf-59527b3d4c98" />
+
 
 
 
 # Third Page of report.
 
-<img width="1423" height="764" alt="{F66710C0-D93F-4380-AA99-015AE60B833A}" src="https://github.com/user-attachments/assets/144758aa-1575-4e92-88f3-c28ce046bd60" />
+<img width="1373" height="769" alt="{B49F2B73-B452-4BF4-BA5E-389742B18CB0}" src="https://github.com/user-attachments/assets/bbe154e0-fea3-4dc9-893e-8ce7e95a6cf1" />
+
 
 
 
 # Fourth Page of report.
-<img width="1428" height="777" alt="{C56CFA7D-3855-4E80-BEE3-AB598AE0D7D3}" src="https://github.com/user-attachments/assets/e26b8096-99cc-4fe1-904e-57bb9d797e91" />
+<img width="1293" height="722" alt="{B897B550-CB6F-4874-83DD-B0AB6C739901}" src="https://github.com/user-attachments/assets/ba438442-2720-4e45-9e32-7f5d9ba3f94f" />
 
 
 
 # Fial Page of report.
-<img width="1373" height="731" alt="{47106745-70F2-45FD-AB8A-3DCB651D8AA3}" src="https://github.com/user-attachments/assets/19a98e83-fb33-4630-a8f7-ffe52ee4eadb" />
-
-
- 
- # Project video 
-
- 
-
-
-
-
-https://github.com/user-attachments/assets/74d4a1e5-c383-4457-a791-4ecce19fa91b
-
-
-
-
-
-
-
-
-
-
-
+<img width="1367" height="762" alt="{A442F328-BE9E-4CBE-B4D5-4737768D8779}" src="https://github.com/user-attachments/assets/f6a8e53c-0cf8-4270-b65c-4b60ae366d4f" />
 
 
 # Insights
