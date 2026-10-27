@@ -111,6 +111,12 @@ A stacked column chart visual was used to represent count of returns orders by p
 <img width="1367" height="762" alt="{A442F328-BE9E-4CBE-B4D5-4737768D8779}" src="https://github.com/user-attachments/assets/f6a8e53c-0cf8-4270-b65c-4b60ae366d4f" />
 
 
+
+Project Video.
+
+https://github.com/user-attachments/assets/213270b7-284b-40e9-a0d2-1ee61e2d724d
+
+
 # Insights
 
 A five page report was created on Power BI Desktop & it was then published to Power BI Service.
